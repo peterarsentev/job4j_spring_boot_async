@@ -1,0 +1,16 @@
+<configuration>
+    <!-- Console appender definition -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Setting root logging level to WARN -->
+    <root level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <!-- Specific logger configurations -->
+    <logger name="org.springframework" level="WARN"/>
+</configuration>
